@@ -31,6 +31,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,6 +42,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(27, 61);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(630, 434);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -49,26 +52,51 @@
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 14F);
             this.label1.Location = new System.Drawing.Point(30, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 28);
+            this.label1.Size = new System.Drawing.Size(519, 28);
             this.label1.TabIndex = 1;
-            this.label1.Text = "開始ボタンを押してください";
+            this.label1.Text = "開始ボタンを押すと，物体検出を開始できます";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            this.button1.Location = new System.Drawing.Point(715, 103);
+            this.button1.Location = new System.Drawing.Point(691, 263);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 39);
+            this.button1.Size = new System.Drawing.Size(149, 47);
             this.button1.TabIndex = 2;
             this.button1.Text = "開始";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.label2.Location = new System.Drawing.Point(692, 390);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 24);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "画像表示FPS";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "USBカメラ",
+            "Dummy"});
+            this.comboBox1.Location = new System.Drawing.Point(691, 160);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(149, 32);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.Text = "USBカメラ";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 513);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -87,6 +115,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
