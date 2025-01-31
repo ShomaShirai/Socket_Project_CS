@@ -29,6 +29,9 @@ namespace ss2411_GUI
         {
             InitializeComponent();
 
+            this.Text = "Socket GUI";
+            this.Icon = new Icon("C:\\Users\\takos\\source\\repos\\ss2411_GUI\\ss2411_GUI\\endo.ico");
+
             // C#からC++への画像送信用のPUBソケットを作成
             cppPublisher = new PublisherSocket();
             cppPublisher.Bind("tcp://*:5557");
